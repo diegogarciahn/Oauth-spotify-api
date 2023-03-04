@@ -12,3 +12,5 @@ https://developer.spotify.com/documentation/general/guides/authorization/client-
 4. Run npm install.
 
 5. Run node app.
+
+6. In your browser paste this to see the results http://localhost:8080/api/spotify 
