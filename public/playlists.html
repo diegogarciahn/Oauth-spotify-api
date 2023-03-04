@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar datos de JSON en HTML</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="custom-heading">Playlists recomendadas:</h1>
+    </div>
+    <% if(playlists.length> 0) { %>
+        <ul>
+            <% playlists.forEach((playlist)=> { %>
+                <li>
+                    <div class="playlist-container playlist">
+                        <img class="playlist-image" src="<%= playlist.images[0].url %>" alt="">
+                        <h2 class="playlist">
+                            <%= playlist.name %>
+                        </h2>
+                        <p class="playlist-description">
+                            Esta es una descripción inventada para la playlist <%= playlist.name %>.
+                        </p>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No playlists found.</p>
+    <% } %>
+    
+</body>
+
+</html>
